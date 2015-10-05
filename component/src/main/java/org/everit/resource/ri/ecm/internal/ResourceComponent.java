@@ -22,6 +22,7 @@ import org.everit.osgi.ecm.annotation.Activate;
 import org.everit.osgi.ecm.annotation.Component;
 import org.everit.osgi.ecm.annotation.ConfigurationPolicy;
 import org.everit.osgi.ecm.annotation.Deactivate;
+import org.everit.osgi.ecm.annotation.ManualService;
 import org.everit.osgi.ecm.annotation.ServiceRef;
 import org.everit.osgi.ecm.annotation.attribute.StringAttribute;
 import org.everit.osgi.ecm.annotation.attribute.StringAttributes;
@@ -47,9 +48,10 @@ import aQute.bnd.annotation.headers.ProvideCapability;
 @StringAttributes({
     @StringAttribute(attributeId = Constants.SERVICE_DESCRIPTION,
         defaultValue = ResourceConstants.DEFAULT_SERVICE_DESCRIPTION,
-        label = "Service Description",
+        priority = 1, label = "Service Description",
         description = "The description of this component configuration. It is used to easily "
             + "identify the service registered by this component.") })
+@ManualService(ResourceService.class)
 public class ResourceComponent {
 
   private QuerydslSupport querydslSupport;
@@ -79,7 +81,7 @@ public class ResourceComponent {
   }
 
   @ServiceRef(attributeId = ResourceConstants.ATTR_QUERYDSL_SUPPORT_TARGET, defaultValue = "",
-      attributePriority = 1, label = "Querydsl Support OSGi filter",
+      attributePriority = 2, label = "Querydsl Support OSGi filter",
       description = "OSGi Service filter expression for QueryDSLSupport instance.")
   public void setQuerydslSupport(final QuerydslSupport querydslSupport) {
     this.querydslSupport = querydslSupport;
