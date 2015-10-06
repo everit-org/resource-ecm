@@ -37,7 +37,7 @@
   <description>Component that is designed for connecting different entities.</description>
 
   <properties>
-    <projectpath>resource-ri</projectpath>
+    <projectpath>resource-ri-ecm</projectpath>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
@@ -99,7 +99,7 @@
     <dependency>
       <groupId>org.everit.resource</groupId>
       <artifactId>org.everit.resource.ri</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.0</version>
     </dependency>
     
     <dependency>
