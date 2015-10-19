@@ -2,7 +2,7 @@ sudo: false
 language: java
 jdk:
   - oraclejdk8
-script: mvn bundle:install source:jar javadoc:jar
+script: mvn verify
 install: true
 sudo: false
 cache:
