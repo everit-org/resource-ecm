@@ -29,7 +29,7 @@ import org.everit.resource.ri.schema.qdsl.QResource;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.mysema.query.sql.SQLQuery;
+import com.querydsl.sql.SQLQuery;
 
 import aQute.bnd.annotation.headers.ProvideCapability;
 
@@ -64,7 +64,7 @@ public class ResourceComponentTest {
   private Long countResources() {
     return querydslSupport.execute((connection, configuration) -> {
       QResource resource = QResource.resource;
-      return new SQLQuery(connection, configuration).from(resource).count();
+      return new SQLQuery<Long>(connection, configuration).from(resource).fetchCount();
     });
   }
 
