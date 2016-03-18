@@ -93,7 +93,7 @@
             </systemProperties>
             <vmArguments>
               <debug>-Xdebug</debug>
-              <debugport>-Xrunjdwp:server=y,transport=dt_socket,address=9009,suspend=y</debugport>
+              <debugport>-Xrunjdwp:server=y,transport=dt_socket,address=9009,suspend=n</debugport>
             </vmArguments>
             <overrides>
               <override>
@@ -114,90 +114,90 @@
             </overrides>
           </launchConfig>
           <environments>
-<!--             <environment> -->
-<!--               <id>equinoxtest</id> -->
-<!--               <framework>equinox</framework> -->
-<!--               <launchConfig> -->
-<!--                 <systemProperties> -->
-<!--                   <felix.cm.dir>../../../configadmin</felix.cm.dir> -->
-<!--                   <org.osgi.service.http.port>-1</org.osgi.service.http.port> -->
-<!--                   <org.osgi.service.http.port.secure>0</org.osgi.service.http.port.secure> -->
-<!--                   <org.osgi.framework.system.packages>javax.crypto.spec,javax.crypto,javax.imageio,javax.management,javax.management.openmbean,javax.naming.ldap,javax.naming.spi,javax.naming,javax.net.ssl,javax.net,javax.script,javax.security.auth.x500,javax.security.auth,javax.security.cert,javax.swing.border,javax.swing,javax.xml.namespace,javax.xml.parsers,javax.xml.transform.dom,javax.xml.transform.sax,javax.xml.transform.stream,javax.xml.transform,javax.xml.xpath,org.ietf.jgss,org.w3c.dom,org.xml.sax.ext,org.xml.sax.helpers,org.xml.sax</org.osgi.framework.system.packages> -->
-<!--                   <mvel2.disable.jit>true</mvel2.disable.jit> -->
-<!--                 </systemProperties> -->
-<!--                 <vmArguments> -->
-<!--                   <debug /> -->
-<!--                   <debugport></debugport> -->
-<!--                   <jmxRemotePort>-Dcom.sun.management.jmxremote.port=9999</jmxRemotePort> -->
-<!--                   <jmxRemoteAuth>-Dcom.sun.management.jmxremote.authenticate=false</jmxRemoteAuth> -->
-<!--                   <jmxRemoteSSL>-Dcom.sun.management.jmxremote.ssl=false</jmxRemoteSSL> -->
-<!--                 </vmArguments> -->
-<!--                 <overrides> -->
-<!--                   <override> -->
-<!--                     <useBy>PARSABLES</useBy> -->
-<!--                     <systemProperties> -->
-<!--                       <org.osgi.service.http.port.secure>4848</org.osgi.service.http.port.secure> -->
-<!--                     </systemProperties> -->
-<!--                     <vmArguments> -->
-<!--                       <debug>-Xdebug</debug> -->
-<!--                       <debugport>-Xrunjdwp:server=y,transport=dt_socket,address=9008,suspend=n</debugport> -->
-<!--                     </vmArguments> -->
-<!--                   </override> -->
-<!--                   <override> -->
-<!--                     <useBy>IDE</useBy> -->
-<!--                     <systemProperties> -->
-<!--                       <org.osgi.service.http.port.secure>4949</org.osgi.service.http.port.secure> -->
-<!--                     </systemProperties> -->
-<!--                     <vmArguments> -->
-<!--                       <debug /> -->
-<!--                       <debugport></debugport> -->
-<!--                     </vmArguments> -->
-<!--                   </override> -->
-<!--                 </overrides> -->
-<!--               </launchConfig> -->
-<!--             </environment> -->
-<!--             <environment> -->
-<!--               <id>equinoxtest-yajsw</id> -->
-<!--               <framework>equinox-yajsw</framework> -->
-<!--               <launchConfig> -->
-<!--                 <systemProperties> -->
-<!--                   <felix.cm.dir>../../../configadmin</felix.cm.dir> -->
-<!--                   <org.osgi.service.http.port>-1</org.osgi.service.http.port> -->
-<!--                   <org.osgi.service.http.port.secure>0</org.osgi.service.http.port.secure> -->
-<!--                   <org.osgi.framework.system.packages>javax.crypto.spec,javax.crypto,javax.imageio,javax.management,javax.management.openmbean,javax.naming.ldap,javax.naming.spi,javax.naming,javax.net.ssl,javax.net,javax.script,javax.security.auth.x500,javax.security.auth,javax.security.cert,javax.swing.border,javax.swing,javax.xml.namespace,javax.xml.parsers,javax.xml.transform.dom,javax.xml.transform.sax,javax.xml.transform.stream,javax.xml.transform,javax.xml.xpath,org.ietf.jgss,org.w3c.dom,org.xml.sax.ext,org.xml.sax.helpers,org.xml.sax</org.osgi.framework.system.packages> -->
-<!--                   <mvel2.disable.jit>true</mvel2.disable.jit> -->
-<!--                 </systemProperties> -->
-<!--                 <vmArguments> -->
-<!--                   <debug /> -->
-<!--                   <debugport></debugport> -->
-<!--                   <jmxRemotePort>-Dcom.sun.management.jmxremote.port=9999</jmxRemotePort> -->
-<!--                   <jmxRemoteAuth>-Dcom.sun.management.jmxremote.authenticate=false</jmxRemoteAuth> -->
-<!--                   <jmxRemoteSSL>-Dcom.sun.management.jmxremote.ssl=false</jmxRemoteSSL> -->
-<!--                 </vmArguments> -->
-<!--                 <overrides> -->
-<!--                   <override> -->
-<!--                     <useBy>PARSABLES</useBy> -->
-<!--                     <systemProperties> -->
-<!--                       <org.osgi.service.http.port.secure>4848</org.osgi.service.http.port.secure> -->
-<!--                     </systemProperties> -->
-<!--                     <vmArguments> -->
-<!--                       <debug>-Xdebug</debug> -->
-<!--                       <debugport>-Xrunjdwp:server=y,transport=dt_socket,address=9008,suspend=n</debugport> -->
-<!--                     </vmArguments> -->
-<!--                   </override> -->
-<!--                   <override> -->
-<!--                     <useBy>IDE</useBy> -->
-<!--                     <systemProperties> -->
-<!--                       <org.osgi.service.http.port.secure>4949</org.osgi.service.http.port.secure> -->
-<!--                     </systemProperties> -->
-<!--                     <vmArguments> -->
-<!--                       <debug /> -->
-<!--                       <debugport></debugport> -->
-<!--                     </vmArguments> -->
-<!--                   </override> -->
-<!--                 </overrides> -->
-<!--               </launchConfig> -->
-<!--             </environment> -->
+            <environment>
+              <id>equinoxtest</id>
+              <framework>equinox</framework>
+              <launchConfig>
+                <systemProperties>
+                  <felix.cm.dir>../../../configadmin</felix.cm.dir>
+                  <org.osgi.service.http.port>-1</org.osgi.service.http.port>
+                  <org.osgi.service.http.port.secure>0</org.osgi.service.http.port.secure>
+                  <org.osgi.framework.system.packages>javax.crypto.spec,javax.crypto,javax.imageio,javax.management,javax.management.openmbean,javax.naming.ldap,javax.naming.spi,javax.naming,javax.net.ssl,javax.net,javax.script,javax.security.auth.x500,javax.security.auth,javax.security.cert,javax.swing.border,javax.swing,javax.xml.namespace,javax.xml.parsers,javax.xml.transform.dom,javax.xml.transform.sax,javax.xml.transform.stream,javax.xml.transform,javax.xml.xpath,org.ietf.jgss,org.w3c.dom,org.xml.sax.ext,org.xml.sax.helpers,org.xml.sax</org.osgi.framework.system.packages>
+                  <mvel2.disable.jit>true</mvel2.disable.jit>
+                </systemProperties>
+                <vmArguments>
+                  <debug />
+                  <debugport></debugport>
+                  <jmxRemotePort>-Dcom.sun.management.jmxremote.port=9999</jmxRemotePort>
+                  <jmxRemoteAuth>-Dcom.sun.management.jmxremote.authenticate=false</jmxRemoteAuth>
+                  <jmxRemoteSSL>-Dcom.sun.management.jmxremote.ssl=false</jmxRemoteSSL>
+                </vmArguments>
+                <overrides>
+                  <override>
+                    <useBy>PARSABLES</useBy>
+                    <systemProperties>
+                      <org.osgi.service.http.port.secure>4848</org.osgi.service.http.port.secure>
+                    </systemProperties>
+                    <vmArguments>
+                      <debug>-Xdebug</debug>
+                      <debugport>-Xrunjdwp:server=y,transport=dt_socket,address=9008,suspend=n</debugport>
+                    </vmArguments>
+                  </override>
+                  <override>
+                    <useBy>IDE</useBy>
+                    <systemProperties>
+                      <org.osgi.service.http.port.secure>4949</org.osgi.service.http.port.secure>
+                    </systemProperties>
+                    <vmArguments>
+                      <debug />
+                      <debugport></debugport>
+                    </vmArguments>
+                  </override>
+                </overrides>
+              </launchConfig>
+            </environment>
+            <environment>
+              <id>equinoxtest-yajsw</id>
+              <framework>equinox-yajsw</framework>
+              <launchConfig>
+                <systemProperties>
+                  <felix.cm.dir>../../../configadmin</felix.cm.dir>
+                  <org.osgi.service.http.port>-1</org.osgi.service.http.port>
+                  <org.osgi.service.http.port.secure>0</org.osgi.service.http.port.secure>
+                  <org.osgi.framework.system.packages>javax.crypto.spec,javax.crypto,javax.imageio,javax.management,javax.management.openmbean,javax.naming.ldap,javax.naming.spi,javax.naming,javax.net.ssl,javax.net,javax.script,javax.security.auth.x500,javax.security.auth,javax.security.cert,javax.swing.border,javax.swing,javax.xml.namespace,javax.xml.parsers,javax.xml.transform.dom,javax.xml.transform.sax,javax.xml.transform.stream,javax.xml.transform,javax.xml.xpath,org.ietf.jgss,org.w3c.dom,org.xml.sax.ext,org.xml.sax.helpers,org.xml.sax</org.osgi.framework.system.packages>
+                  <mvel2.disable.jit>true</mvel2.disable.jit>
+                </systemProperties>
+                <vmArguments>
+                  <debug />
+                  <debugport></debugport>
+                  <jmxRemotePort>-Dcom.sun.management.jmxremote.port=9999</jmxRemotePort>
+                  <jmxRemoteAuth>-Dcom.sun.management.jmxremote.authenticate=false</jmxRemoteAuth>
+                  <jmxRemoteSSL>-Dcom.sun.management.jmxremote.ssl=false</jmxRemoteSSL>
+                </vmArguments>
+                <overrides>
+                  <override>
+                    <useBy>PARSABLES</useBy>
+                    <systemProperties>
+                      <org.osgi.service.http.port.secure>4848</org.osgi.service.http.port.secure>
+                    </systemProperties>
+                    <vmArguments>
+                      <debug>-Xdebug</debug>
+                      <debugport>-Xrunjdwp:server=y,transport=dt_socket,address=9008,suspend=n</debugport>
+                    </vmArguments>
+                  </override>
+                  <override>
+                    <useBy>IDE</useBy>
+                    <systemProperties>
+                      <org.osgi.service.http.port.secure>4949</org.osgi.service.http.port.secure>
+                    </systemProperties>
+                    <vmArguments>
+                      <debug />
+                      <debugport></debugport>
+                    </vmArguments>
+                  </override>
+                </overrides>
+              </launchConfig>
+            </environment>
             <environment>
               <id>felixtest</id>
               <framework>felix</framework>
@@ -210,8 +210,8 @@
                   <mvel2.disable.jit>true</mvel2.disable.jit>
                 </systemProperties>
                 <vmArguments>
-                  <debug />
-                  <debugport></debugport>
+                  <debug>-Xdebug</debug>
+                  <debugport>-Xrunjdwp:server=y,transport=dt_socket,address=9008,suspend=n</debugport>
                   <jmxRemotePort>-Dcom.sun.management.jmxremote.port=9997</jmxRemotePort>
                   <jmxRemoteAuth>-Dcom.sun.management.jmxremote.authenticate=false</jmxRemoteAuth>
                   <jmxRemoteSSL>-Dcom.sun.management.jmxremote.ssl=false</jmxRemoteSSL>
@@ -243,51 +243,51 @@
                 </overrides>
               </launchConfig>
             </environment>
-<!--             <environment> -->
-<!--               <id>felixtest-yajsw</id> -->
-<!--               <framework>felix-yajsw</framework> -->
-<!--               <launchConfig> -->
-<!--                 <systemProperties> -->
-<!--                   <felix.cm.dir>../felixtest/configuration/configadmin</felix.cm.dir> -->
-<!--                   <org.osgi.service.http.port>-1</org.osgi.service.http.port> -->
-<!--                   <org.osgi.service.http.port.secure>0</org.osgi.service.http.port.secure> -->
-<!--                   <org.osgi.framework.system.packages>org.osgi.resource;version=1.0.0,org.osgi.framework.launch;version=1.0.0,org.osgi.framework.startlevel;version=1.0.0,org.osgi.service.startlevel;version=1.1.0,org.osgi.service.packageadmin;version=1.2.0,org.osgi.util.tracker;version=1.5.0,org.osgi.framework;version=1.8.0,org.osgi.framework.wiring;version=1.2.0,javax.crypto.spec,javax.crypto,javax.imageio,javax.management,javax.management.openmbean,javax.naming.ldap,javax.naming.spi,javax.naming,javax.net.ssl,javax.net,javax.script,javax.security.auth.x500,javax.security.auth,javax.security.cert,javax.swing.border,javax.swing,javax.xml.namespace,javax.xml.parsers,javax.xml.transform.dom,javax.xml.transform.sax,javax.xml.transform.stream,javax.xml.transform,javax.xml.xpath,org.ietf.jgss,org.w3c.dom,org.xml.sax.ext,org.xml.sax.helpers,org.xml.sax</org.osgi.framework.system.packages> -->
-<!--                   <mvel2.disable.jit>true</mvel2.disable.jit> -->
-<!--                 </systemProperties> -->
-<!--                 <vmArguments> -->
-<!--                   <debug /> -->
-<!--                   <debugport></debugport> -->
-<!--                   <jmxRemotePort>-Dcom.sun.management.jmxremote.port=9996</jmxRemotePort> -->
-<!--                   <jmxRemoteAuth>-Dcom.sun.management.jmxremote.authenticate=false</jmxRemoteAuth> -->
-<!--                   <jmxRemoteSSL>-Dcom.sun.management.jmxremote.ssl=false</jmxRemoteSSL> -->
-<!--                 </vmArguments> -->
-<!--                 <programArguments> -->
-<!--                   <configuration></configuration> -->
-<!--                 </programArguments> -->
-<!--                 <overrides> -->
-<!--                   <override> -->
-<!--                     <useBy>PARSABLES</useBy> -->
-<!--                     <systemProperties> -->
-<!--                       <org.osgi.service.http.port.secure>4848</org.osgi.service.http.port.secure> -->
-<!--                     </systemProperties> -->
-<!--                     <vmArguments> -->
-<!--                       <debug>-Xdebug</debug> -->
-<!--                       <debugport>-Xrunjdwp:server=y,transport=dt_socket,address=9008,suspend=n</debugport> -->
-<!--                     </vmArguments> -->
-<!--                   </override> -->
-<!--                   <override> -->
-<!--                     <useBy>IDE</useBy> -->
-<!--                     <systemProperties> -->
-<!--                       <org.osgi.service.http.port.secure>4949</org.osgi.service.http.port.secure> -->
-<!--                     </systemProperties> -->
-<!--                     <vmArguments> -->
-<!--                       <debug /> -->
-<!--                       <debugport></debugport> -->
-<!--                     </vmArguments> -->
-<!--                   </override> -->
-<!--                 </overrides> -->
-<!--               </launchConfig> -->
-<!--             </environment> -->
+            <environment>
+              <id>felixtest-yajsw</id>
+              <framework>felix-yajsw</framework>
+              <launchConfig>
+                <systemProperties>
+                  <felix.cm.dir>../felixtest-yajsw/configuration/configadmin</felix.cm.dir>
+                  <org.osgi.service.http.port>-1</org.osgi.service.http.port>
+                  <org.osgi.service.http.port.secure>0</org.osgi.service.http.port.secure>
+                  <org.osgi.framework.system.packages>org.osgi.resource;version=1.0.0,org.osgi.framework.launch;version=1.0.0,org.osgi.framework.startlevel;version=1.0.0,org.osgi.service.startlevel;version=1.1.0,org.osgi.service.packageadmin;version=1.2.0,org.osgi.util.tracker;version=1.5.0,org.osgi.framework;version=1.8.0,org.osgi.framework.wiring;version=1.2.0,javax.crypto.spec,javax.crypto,javax.imageio,javax.management,javax.management.openmbean,javax.naming.ldap,javax.naming.spi,javax.naming,javax.net.ssl,javax.net,javax.script,javax.security.auth.x500,javax.security.auth,javax.security.cert,javax.swing.border,javax.swing,javax.xml.namespace,javax.xml.parsers,javax.xml.transform.dom,javax.xml.transform.sax,javax.xml.transform.stream,javax.xml.transform,javax.xml.xpath,org.ietf.jgss,org.w3c.dom,org.xml.sax.ext,org.xml.sax.helpers,org.xml.sax</org.osgi.framework.system.packages>
+                  <mvel2.disable.jit>true</mvel2.disable.jit>
+                </systemProperties>
+                <vmArguments>
+                  <debug />
+                  <debugport></debugport>
+                  <jmxRemotePort>-Dcom.sun.management.jmxremote.port=9996</jmxRemotePort>
+                  <jmxRemoteAuth>-Dcom.sun.management.jmxremote.authenticate=false</jmxRemoteAuth>
+                  <jmxRemoteSSL>-Dcom.sun.management.jmxremote.ssl=false</jmxRemoteSSL>
+                </vmArguments>
+                <programArguments>
+                  <configuration></configuration>
+                </programArguments>
+                <overrides>
+                  <override>
+                    <useBy>PARSABLES</useBy>
+                    <systemProperties>
+                      <org.osgi.service.http.port.secure>4848</org.osgi.service.http.port.secure>
+                    </systemProperties>
+                    <vmArguments>
+                      <debug>-Xdebug</debug>
+                      <debugport>-Xrunjdwp:server=y,transport=dt_socket,address=9008,suspend=n</debugport>
+                    </vmArguments>
+                  </override>
+                  <override>
+                    <useBy>IDE</useBy>
+                    <systemProperties>
+                      <org.osgi.service.http.port.secure>4949</org.osgi.service.http.port.secure>
+                    </systemProperties>
+                    <vmArguments>
+                      <debug />
+                      <debugport></debugport>
+                    </vmArguments>
+                  </override>
+                </overrides>
+              </launchConfig>
+            </environment>
           </environments>
         </configuration>
       </plugin>
