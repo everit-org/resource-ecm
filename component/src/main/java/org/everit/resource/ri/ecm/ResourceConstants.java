@@ -20,13 +20,13 @@ package org.everit.resource.ri.ecm;
  */
 public final class ResourceConstants {
 
-  public static final String DEFAULT_SERVICE_DESCRIPTION = "Default Resource Service";
-
   /**
    * The property name of the OSGi filter expression defining which QuerydslSupport should be used
    * by the resource component.
    */
   public static final String ATTR_QUERYDSL_SUPPORT_TARGET = "querydslSupport.target";
+
+  public static final String DEFAULT_SERVICE_DESCRIPTION = "Everit Resource Service";
 
   /**
    * The service factory PID of the resource component.

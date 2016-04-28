@@ -22,7 +22,7 @@ import org.everit.osgi.ecm.annotation.Service;
 import org.everit.osgi.ecm.annotation.ServiceRef;
 import org.everit.osgi.ecm.annotation.attribute.StringAttribute;
 import org.everit.osgi.ecm.annotation.attribute.StringAttributes;
-import org.everit.osgi.ecm.extender.ECMExtenderConstants;
+import org.everit.osgi.ecm.extender.ExtendComponent;
 import org.everit.persistence.querydsl.support.QuerydslSupport;
 import org.everit.resource.ResourceService;
 import org.everit.resource.ri.schema.qdsl.QResource;
@@ -31,20 +31,17 @@ import org.junit.Test;
 
 import com.querydsl.sql.SQLQuery;
 
-import aQute.bnd.annotation.headers.ProvideCapability;
-
 /**
  * Test for Resource Component.
  */
+@ExtendComponent
 @Component(componentId = "ResourceComponentTest", configurationPolicy = ConfigurationPolicy.IGNORE)
-@ProvideCapability(ns = ECMExtenderConstants.CAPABILITY_NS_COMPONENT,
-    value = ECMExtenderConstants.CAPABILITY_ATTR_CLASS + "=${@class}")
 @StringAttributes({
     @StringAttribute(attributeId = TestRunnerConstants.SERVICE_PROPERTY_TESTRUNNER_ENGINE_TYPE,
         defaultValue = "junit4"),
     @StringAttribute(attributeId = TestRunnerConstants.SERVICE_PROPERTY_TEST_ID,
         defaultValue = "resourceComponentTest") })
-@Service(value = ResourceComponentTest.class)
+@Service
 public class ResourceComponentTest {
 
   /**
