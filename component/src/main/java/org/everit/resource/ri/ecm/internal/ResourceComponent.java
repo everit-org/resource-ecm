@@ -61,6 +61,7 @@ public class ResourceComponent {
    */
   @Activate
   public void activate(final ComponentContext<ResourceComponent> componentContext) {
+	  System.out.println("kkkjjELLO ----------------------------");
     ResourceService resourceService = new ResourceServiceImpl(querydslSupport);
     Dictionary<String, Object> serviceProperties =
         new Hashtable<>(componentContext.getProperties());
