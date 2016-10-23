@@ -15,11 +15,9 @@
  */
 package org.everit.resource.ri.ecm.tests;
 
-import org.everit.osgi.dev.testrunner.TestDuringDevelopment;
 import org.everit.osgi.dev.testrunner.TestRunnerConstants;
 import org.everit.osgi.ecm.annotation.Component;
 import org.everit.osgi.ecm.annotation.ConfigurationPolicy;
-import org.everit.osgi.ecm.annotation.Deactivate;
 import org.everit.osgi.ecm.annotation.Service;
 import org.everit.osgi.ecm.annotation.ServiceRef;
 import org.everit.osgi.ecm.annotation.attribute.StringAttribute;
@@ -46,18 +44,6 @@ import com.querydsl.sql.SQLQuery;
 @Service
 public class ResourceComponentTest {
 
-	@Deactivate
-	public void deactivate() {
-		System.out.println("eactivate calleddss");
-//		try {
-//			Thread.sleep(5000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-		System.out.println("After sleeping");
-	}
-	
   /**
    * Fake, non existing resourceId to be able to test deleteResource with wrong parameter.
    */

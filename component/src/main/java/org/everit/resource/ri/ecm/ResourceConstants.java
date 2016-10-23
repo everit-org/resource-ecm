@@ -19,7 +19,7 @@ package org.everit.resource.ri.ecm;
  * Constants of the resource component.
  */
 public final class ResourceConstants {
-	
+
   /**
    * The property name of the OSGi filter expression defining which QuerydslSupport should be used
    * by the resource component.
